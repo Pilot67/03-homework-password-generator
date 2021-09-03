@@ -17,19 +17,25 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-var pwdParameters = {
-  //length:6,
-  minLength: 8,
-  maxLength: 128,
-  useLowercase: true,
-  useUppercase: true,
-  useNumbers: true,
-  useSpecial: true
-};
 
 function generatePassword(){
   // declare some local variables
+  //pwdParameters = all of the required user input parameters
+  var pwdParameters = {
+    minLength: 8,
+    maxLength: 128,
+  };
+  //usableChars = array of usable characters and initialise the useSet
+  var usableChars = {
+    usableCharArray: [],
+    lowerCaseChars: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
+    upperCaseChars: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],
+    numericalChars: ['0','1','2','3','4','5','6','7','8','9'],
+    specialChars: ['@','%','+',"\\",'/',"\'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.']
+  }
   
+  var generatedPassword = '';
+
   // Prompt for the password length and check if it is between min and max - loop if its outside of the parameters
   do{ 
     pwdParameters.length = parseInt(prompt("How long would you like your password \nIt must be between "
@@ -47,70 +53,44 @@ function generatePassword(){
     }
   }while (! correctLength);
 
-  if (confirm("Would you like to use lowercase charaters")) {
-    pwdParameters.useLowercase = true;
+  if (pwdParameters.useLowercase = confirm("Would you like to use lowercase charaters")) {
+    usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.lowerCaseChars);
     alert("Lower case selected");
   }
-  if (confirm("Would you like to use UPPERCASE charaters")) {
-    pwdParameters.useUppercase = true;
+  if (pwdParameters.useUppercase = confirm("Would you like to use UPPERCASE charaters")) {
+    usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.upperCaseChars);
     alert("UPPER case selected");
   }
-  if (confirm("Would you like to use numbers charaters")) {
-    pwdParameters.useNumbers = true;
+  if (pwdParameters.useNumbers = confirm("Would you like to use numbers charaters")) {
+    usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.numericalChars);
     alert("Numbers selected");
   }
-  if (confirm("Would you like to use special charaters charaters")) {
-    pwdParameters.useSpecial = true;
+  if (pwdParameters.useSpecial = confirm("Would you like to use special charaters charaters")) {
+    usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.specialChars);
     alert("Special charaters selected");
   }
-
-  if (pwdParameters.useLowercase || pwdParameters.upperCaseChars) {
-    alert("case selected");
+  // Check at least 1 set of chareters has been selected
+  if (!(pwdParameters.useLowercase || pwdParameters.useUppercase || pwdParameters.useNumbers || pwdParameters.useSpecial)) {
+    alert("Nothing selected\nYou must choose at least 1 set of charaters");
+    return null;
   }
-
-
-
-  return pwdParameters.length;
-
+  
+  // if (pwdParameters.useLowercase){
+  //   usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.lowerCaseChars);
+  // };
+  // if (pwdParameters.useUppercase){
+  //   usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.upperCaseChars);
+  // };
+  // if (pwdParameters.useNumbers){
+  //   usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.numericalChars);
+  // };
+  // if (pwdParameters.useSpecial){
+  //   usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.specialChars);
+  // };
+  
+  for (i=0; i<pwdParameters.length; i++) {
+    char = Math.floor(Math.random()*usableChars.usableCharArray.length);
+    generatedPassword = generatedPassword + usableChars.usableCharArray[char];
+  }
+  return generatedPassword;
 }// End of function
-
-
-
-
-var usabeleChars = {
-  blank: [],
-  lowerCaseChars: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
-  upperCaseChars: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],
-  numericalChars: ['0','1','2','3','4','5','6','7','8','9'],
-  specialChars: ['@','%','+',"\\",'/',"\'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.']
-}
-
-var usableChars =[];
-var generatedPassword = '';
-var str = '';
-
-if (pwdParameters.useLowercase){
-  usableChars = usableChars.concat(usabeleChars.lowerCaseChars);
-};
-if (pwdParameters.useUppercase){
-  usableChars= usableChars.concat(usabeleChars.upperCaseChars);
-};
-if (pwdParameters.useNumbers){
-  usableChars= usableChars.concat(usabeleChars.numericalChars);
-};
-if (pwdParameters.useSpecial){
-  usableChars= usableChars.concat(usabeleChars.specialChars);
-};
-
-for (i=0; i<pwdParameters.length; i++) {
-  char = Math.floor(Math.random()*usableChars.length);
-  str = str + usableChars[char];
-  generatedPassword = generatedPassword + usableChars[char];
-}
-
-
-console.log(usableChars[0]);
-console.log(usableChars.length)
-console.log(generatedPassword)
-console.log(str)
-console.log(str.length)

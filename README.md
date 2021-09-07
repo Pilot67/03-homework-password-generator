@@ -11,10 +11,13 @@ Press the red "Generate Password" button to begin.
 Enter the lenth of the required password between 8 and 128 characters. If you enter an invalid number or a number outside of the limit the system will check and re-prompt you  
 &nbsp;  
 Next you will be asked a series of questions using window prompts. select OK or cancel to confirm.  
-![Screen Shot 2021-09-07 at 9 31 01 am](https://user-images.githubusercontent.com/86697483/132266194-523f8397-1540-4dc6-8fdb-fbdfaedad8f0.png)  
-![Screen Shot 2021-09-07 at 9 31 11 am](https://user-images.githubusercontent.com/86697483/132266230-3f60672b-dad1-4068-85b7-63bce95ab0d1.png)  
-![Screen Shot 2021-09-07 at 9 31 21 am](https://user-images.githubusercontent.com/86697483/132266240-d319656e-4aa4-4212-810e-7b271f4fbe72.png)  
-![Screen Shot 2021-09-07 at 9 31 32 am](https://user-images.githubusercontent.com/86697483/132266243-cd6b536a-f50f-4a4b-b46e-a0e721be038f.png)  
+![Screen Shot 2021-09-07 at 4 12 36 pm](https://user-images.githubusercontent.com/86697483/132293410-3e6b8340-1b6d-4524-9511-4c7db3fe72b8.png)  
+![Screen Shot 2021-09-07 at 4 12 52 pm](https://user-images.githubusercontent.com/86697483/132293435-eb827d2c-5310-42b7-973c-a7c53e2c2448.png)  
+![Screen Shot 2021-09-07 at 4 13 05 pm](https://user-images.githubusercontent.com/86697483/132293456-593ce8a4-8bde-4f9b-97d0-b1a48954be7b.png)  
+![Screen Shot 2021-09-07 at 4 13 15 pm](https://user-images.githubusercontent.com/86697483/132293480-f4f4115e-e90a-46bd-8d93-ef9f3b311f07.png)  
+&nbsp;  
+![Screen Shot 2021-09-07 at 4 13 36 pm](https://user-images.githubusercontent.com/86697483/132293531-7ce58f1e-0290-4b33-bb74-426f3d0620b6.png)  
+If you did not select any character sets, the system will tell you to select at least 1 set.  
 &nbsp;  
 The password is then generated and displayed in the text box: 
 ![Screen Shot 2021-09-07 at 9 31 45 am](https://user-images.githubusercontent.com/86697483/132266267-c930976a-91c4-4e70-8d3d-247e2b2ffa99.png)  

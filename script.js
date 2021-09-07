@@ -48,21 +48,21 @@ function generatePassword(){
     }while (! correctLength);
 
     //using window prompts confirm the use of lower, upper, numbers and special characters
-    if (pwdParameters.useLowercase = confirm("Would you like to use lowercase charaters")) {
+    if (pwdParameters.useLowercase = confirm("Would you like to use lowercase characters")) {
       usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.lowerCaseChars);
     }
-    if (pwdParameters.useUppercase = confirm("Would you like to use UPPERCASE charaters")) {
+    if (pwdParameters.useUppercase = confirm("Would you like to use UPPERCASE characters")) {
       usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.upperCaseChars);
     }
-    if (pwdParameters.useNumbers = confirm("Would you like to use numbers charaters")) {
+    if (pwdParameters.useNumbers = confirm("Would you like to use numbers characters")) {
       usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.numericalChars);
     }
-    if (pwdParameters.useSpecial = confirm("Would you like to use special charaters charaters")) {
+    if (pwdParameters.useSpecial = confirm("Would you like to use special characters charaters")) {
       usableChars.usableCharArray = usableChars.usableCharArray.concat(usableChars.specialChars);
     }
     // Check at least 1 set of chareters has been selected
     if (!(pwdParameters.useLowercase || pwdParameters.useUppercase || pwdParameters.useNumbers || pwdParameters.useSpecial)) {
-      alert("Nothing selected\nYou must choose at least 1 set of charaters");
+      alert("Nothing selected\nYou must choose at least 1 set of characters");
       return null;
     }
     

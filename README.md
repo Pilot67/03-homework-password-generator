@@ -27,12 +27,12 @@ The password is then generated and displayed in the text box:
 &nbsp;  
 &nbsp;  
 # Links
-Project Link:  
-Published page:  
+Project Link: https://github.com/Pilot67/03-homework-password-generator  
+Published page: https://pilot67.github.io/03-homework-password-generator/  
 &nbsp;  
 &nbsp;  
 # Acknowledgements
-* [README.md template](https://github.com/othneildrew/Best-README-Template).  
+* [A great README.md template](https://github.com/othneildrew/Best-README-Template).  
 
 
 
